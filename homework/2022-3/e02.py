@@ -16,17 +16,17 @@ if suunta == "oikea":
 
 # Jos käyttäjän syöte oli "vasen", liiku vasemmalle.
 if suunta == "vasen":
-  kilpikonna.left(180)
-  kilpikonna.forward(50)
+    kilpikonna.left(180)
+    kilpikonna.forward(50)
 
 # Lisää tänne uusia valintalauseita.
 # Huomaathan että valintalauseen alla olevat komennot sisennetään tabulaattorilla
 # tai välilyönneillä.
 if suunta == "ylös":
-  kilpikonna.left(90)
-  kilpikonna.forward(50)
+    kilpikonna.left(90)
+    kilpikonna.forward(50)
 
 if suunta == "alas":
-  kilpikonna.right(90)
-  kilpikonna.forward(50)  
+    kilpikonna.right(90)
+    kilpikonna.forward(50)  
   
