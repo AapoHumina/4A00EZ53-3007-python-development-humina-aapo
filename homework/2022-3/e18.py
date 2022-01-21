@@ -1,0 +1,10 @@
+# Kysytään käyttäjältä luku 
+print("Anna luku")
+luku = int(input())
+
+# Printatanaan terve maailma käyttäjän antaman luvun verran
+if luku > 0:
+    i = 0
+    while i < luku:
+        print("terve maailma")
+        luku = luku -1
