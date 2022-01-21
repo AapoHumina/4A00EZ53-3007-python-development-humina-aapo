@@ -12,7 +12,7 @@ suunta = input()
 
 # Jos käyttäjän syöte oli "oikea", liiku oikealle. 
 if suunta == "oikea":
-  kilpikonna.forward(50)
+    kilpikonna.forward(50)
 
 # Jos käyttäjän syöte oli "vasen", liiku vasemmalle.
 if suunta == "vasen":
