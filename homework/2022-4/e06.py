@@ -10,7 +10,7 @@ def my_name_return():
 def output(sana, kerroin):
     print(sana * kerroin)
 
-# Funktio sa 3 argumenttia ja palauttaa niistä isoimman
+# Funktio saa 3 argumenttia ja palauttaa niistä isoimman
 def palauta_isoin(i, j, k):
     if i > j and i > k:
         return i
