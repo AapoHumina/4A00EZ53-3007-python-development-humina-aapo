@@ -6,7 +6,7 @@ def get_int(question,lowest_number, highest_number):
         if number == '4':
             return number
         elif number == '5':
-            return number    
+            return number
         elif number == '6':
             return number
         elif number == '7':
