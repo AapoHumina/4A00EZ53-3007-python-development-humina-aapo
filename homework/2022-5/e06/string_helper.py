@@ -65,6 +65,17 @@ def get_title(title, amount, char):
     return : print(title)
         prints out the title nice and fancy
     """
+    if len(title) < 2:
+        raise Exception("title should be at least 2 characters long")
+    if title != str(title):
+        raise Exception("title should be string")
+    if amount != int(amount):
+        raise Exception("amount should be int number")
+    if char != str(char):
+        raise Exception("char should be string")
+    if len(char) != 1:
+        raise Exception("char should have lenght of one")
+    
     title = title.capitalize()
     if amount < len(title):
         print("invalid values, title length is > graph length")
