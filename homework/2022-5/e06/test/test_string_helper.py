@@ -29,7 +29,7 @@ class TestStringHelper(unittest.TestCase):
         self.assertFalse(is_name("Hajoo paskaas", ignore_case = False))
         self.assertFalse(is_name("K33l Sl4y3r 3000 haha", ignore_case = True))
 
-def test_get_title(self):
+    def test_get_title(self):
         
         test_title1 = """
 ------------------------------
@@ -42,20 +42,16 @@ def test_get_title(self):
         test_title1 = """
 xxxxxxxxxxxxxxxxxxxx
 x       Aapo       x
-xxxxxxxxxxxxxxxxxxxx
-""".strip()
+xxxxxxxxxxxxxxxxxxxx""".strip()
 
         self.assertEqual(get_title("aapo", 20, "x"), test_title1)
 
         test_title1 = """
 --------------------
 -    Battleship    -
---------------------
-""".strip()
+--------------------""".strip()
 
         self.assertEqual(get_title("battleship", 20, "-"), test_title1)
-        self.assertEqual(get_title("leisure suit larry", 5, "h"), "invalid values, title length is > graph length")
-        self.assertEqual(get_title("battletoad 2: revenge of the toadette", 10, "g"), "invalid values, title length is > graph length")
         # expect an exception if get_title function is called with "abc", 2 and "*"
         self.assertRaises(Exception, get_title, "abc", 2, "*")
         self.assertRaises(Exception, get_title, "a", 2, "*")

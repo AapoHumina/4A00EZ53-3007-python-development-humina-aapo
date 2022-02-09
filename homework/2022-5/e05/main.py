@@ -2,7 +2,7 @@ from string_helper import is_name, get_title
 
 title = "battleship"
 
-get_title(title, 30, "-")
+print(get_title(title, 30, "-"))
 
 print("Give your name:", end = "")
 your_name = input()

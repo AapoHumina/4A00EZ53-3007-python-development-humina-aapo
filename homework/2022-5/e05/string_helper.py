@@ -65,16 +65,18 @@ def get_title(title, amount, char):
     return : print(title)
         prints out the title nice and fancy
     """
+    banner = ""
+    banner_title = ""
     title = title.capitalize()
-    if amount < len(title):
-        print("invalid values, title length is > graph length")
-    else:
-        for i in range (3):
-            for j in range(amount-1):
-                if i == 0 or i == 2:
-                    print(char, end = "")
-                else:
-                    print(char, end = "")
-                    print(title.center(amount-2), end = "")
-                    break
-            print(char)
+    for i in range (3):
+        for j in range(amount-2):
+            if i == 0 or i == 2:
+                banner = banner + char
+            else:
+                banner_title = char
+                banner_title = banner_title + title.center(amount-2) + char
+                banner =""
+                break
+        banner = banner + char
+    banner = banner + "\n" + banner_title + "\n" + banner
+    return banner

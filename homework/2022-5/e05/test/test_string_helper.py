@@ -31,7 +31,7 @@ class TestStringHelper(unittest.TestCase):
 
 
 
-def test_get_title(self):
+    def test_get_title(self):
         
         test_title1 = """
 ------------------------------
@@ -53,8 +53,6 @@ xxxxxxxxxxxxxxxxxxxx
 --------------------
 -    Battleship    -
 --------------------
-""".strip()
+        """.strip()
 
         self.assertEqual(get_title("battleship", 20, "-"), test_title1)
-        self.assertEqual(get_title("leisure suit larry", 5, "h"), "invalid values, title length is > graph length")
-        self.assertEqual(get_title("battletoad 2: revenge of the toadette", 10, "g"), "invalid values, title length is > graph length")
