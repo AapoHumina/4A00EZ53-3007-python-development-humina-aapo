@@ -24,7 +24,7 @@ def is_name(name, ignore_case):
         returns False if name is not properly capitalized or not a name at all
     """
     if ignore_case:
-        if name.rfind(" ") == -1:
+        if name.rfind(" ") == -1 or name.count(" ") > 1:
             return False
         else:
             name_list= name.split(" ")
@@ -35,7 +35,7 @@ def is_name(name, ignore_case):
         elif len(first_name) >= 2 and len(last_name) >= 2:
             return True
     else:
-        if name.rfind(" ") == -1:
+        if name.rfind(" ") == -1 or name.count(" ") > 1:
             return False
         else:
             name_list= name.split(" ")
