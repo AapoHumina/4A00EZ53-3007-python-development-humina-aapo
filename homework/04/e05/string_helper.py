@@ -78,11 +78,18 @@ def is_name(name, ignore_case=False):
             name_list= name.split(" ")
             first_name = name_list[0]
             last_name = name_list[1]
+        for index in range(1, len(first_name)):
+            if first_name[index] == first_name[index].capitalize():
+                return False
+        for index in range(1, len(last_name)):
+            if last_name[index] == last_name[index].capitalize():
+                return False
+        for index in range(1, len(first1_name)):
+            if first1_name[index] == first1_name[index].capitalize():
+                return False
         if first_name.isalpha() == False or first1_name.isalpha() == False or last_name.isalpha() == False:
             return False
         elif first_name.islower() or first1_name.islower() or last_name.islower():
-            return False
-        elif first_name.isupper() or first1_name.isupper() or last_name.isupper():
             return False
         elif first_name[0] == first_name[0].capitalize() and first1_name[0] == first1_name[0].capitalize() and last_name[0] == last_name[0].capitalize() and len(first_name) >= 2 and len(first1_name) >= 2 and len(last_name) >= 2:
             return True
