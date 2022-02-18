@@ -2,8 +2,6 @@ import unittest
 
 from util.validation import is_date 
 
-# The function checks if given date str is in ISO format: YYYY-MM-DD.  For example 2022-02-16.
-
 class TestValidation(unittest.TestCase):
     def test_is_date(self):
         self.assertTrue(is_date("2022-10-10"))

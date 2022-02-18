@@ -1,14 +1,13 @@
 import re
 
-# The function checks if given date str is in ISO format: YYYY-MM-DD.  For example 2022-02-16.
-
+"""
 def is_date(date):
-    """
+    
     if not isinstance(date, (str)):
         raise Exception("date should be a string")
     if date.count("-") != 2:
         raise Exception("please use dashes to differentiate between numbers")
-    """
+    
     try:
         year_month_day = re.split("-", date)
         year = re.search("^[0-9]{4}$", year_month_day[0])
@@ -24,5 +23,18 @@ def is_date(date):
             return False
     except:
         return False
+"""
 
-print(is_date(input()))
+def is_date(date):
+    try:
+        year_month_day = re.split("-", date)
+        year = re.search("^[0-9]{4}$", year_month_day[0])
+        month = re.search("^0[1-9]|1[0-2]$", year_month_day[1])
+        day = re.search("^0[1-9]|[12][0-9]|3[01]$", year_month_day[2])
+
+        if bool(year) == True and bool(month) == True and bool(day) == True:
+            return True
+        else:
+            return False
+    except:
+        return False
