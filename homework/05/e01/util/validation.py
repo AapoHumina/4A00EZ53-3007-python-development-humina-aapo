@@ -27,6 +27,8 @@ def is_date(date):
 
 def is_date(date):
     try:
+        if date.startswith("-") or date.endswith("-"):
+            return False
         year_month_day = re.split("-", date)
         year = re.search("^[0-9]{4}$", year_month_day[0])              #searches if number is in range of 0000-9999
         month = re.search("^0[1-9]|1[0-2]$", year_month_day[1])        #searches if number is in range of 01-09 or 10-12
