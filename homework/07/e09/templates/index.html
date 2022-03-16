@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML5 Page</title>
+</head>
+<body>
+    <h2>Customer Database</h2>
+    <ul>
+        {% for name in names %}
+        <li>{{ name }}</li>
+        {% endfor %}
+    </ul>        
+    <h1>Give Input</h1>
+    <form action="/" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="firstname"><br><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="lastname"><br><br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
