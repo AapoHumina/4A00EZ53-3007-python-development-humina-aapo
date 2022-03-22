@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<style>
+</style>
+<body>
+    <a href="http://127.0.0.1:5000/">Home</a><br><br>
+    <a href="http://127.0.0.1:5000/login">Login</a><br><br>
+    <a href="http://127.0.0.1:5000/page1">Page1</a><br><br>
+    <a href="http://127.0.0.1:5000/page2">Page2</a>
+
+
+    <h1>Login to my website</h1>
+
+    <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="name"/>
+        <label for="pwd">Password:</label>
+        <input type="password" name="pwd" placeholder="password"/>
+        <input type="submit" value="login" />
+    </form>
+    {% if check == 1 %}
+        <p>{{error}}</p>
+    {% endif %}
+</body>
+</html>
