@@ -1,0 +1,28 @@
+get http://localhost:5000/blogs
+
+###
+
+get http://localhost:5000/blogs/5
+
+###
+
+post http://localhost:5000/blogs
+content-type: application/json
+
+{ "title": "jussi seikkailee tampereella", "body": "haha" }
+
+###
+
+put http://localhost:5000/blogs/2
+content-type: application/json
+
+{ "title": "jussi seikkailee helsingissa", "body": "yhyy" }
+
+
+###
+
+delete http://localhost:5000/blogs/1
+
+###
+
+delete http://localhost:5000/blogs/0
