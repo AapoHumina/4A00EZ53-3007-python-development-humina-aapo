@@ -24,8 +24,7 @@ def get_blog(the_id):
     for i in range(0, len(blog_posts)):
         if(blog_posts[i]["id"] == the_id):
             return make_response(jsonify(blog_posts[i]), 200)
-    else:
-        return make_response("", 404)
+    return make_response("", 404)
 
 @app.route('/blogs', methods=['POST'])
 def add_blogs():
