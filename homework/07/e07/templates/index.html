@@ -7,8 +7,13 @@
 <body>
     <h2>Customer Database</h2>
     <ul>
-        {% for name in names %}
-        <li>{{ name }}</li>
+        {% for row in names %}
+            <br>
+            <tr>
+            {% for cell in row%}
+            {{ cell }}
+            {% endfor %}
+            </tr>
         {% endfor %}
     </ul>        
     <h1>Give Input</h1>

@@ -60,3 +60,4 @@ def is_email(email):
     except:
         print("Given email was not proper email")
         return False
+        
