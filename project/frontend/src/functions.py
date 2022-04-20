@@ -71,3 +71,11 @@ def draw_hangman(count):
     |       | """)
     else:
         print("something went wrong")
+
+def secret_word():
+    f = open("wordlist.txt", "r")
+    text = f.read()
+    wordlist = text.split("\n")
+    hiddenword = wordlist[(random.randrange(0,len(wordlist)))]
+    f.close
+    return hiddenword
