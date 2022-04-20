@@ -1,3 +1,4 @@
+import time
 from functions import is_name, draw_hangman, secret_word
 
 guesses = []
@@ -19,7 +20,8 @@ while name_check == False:
         print("first character uppercase, no numbers (for example Jussi)")
 
 done = False
-
+print("Try to guess the secret word one letter at a time")
+start = time.time()
 while not done:
     for letter in word:
         if letter.upper() in guesses:
@@ -40,13 +42,16 @@ while not done:
         print(misses)
         if wrong_answer_count == 7:
             break
+    else:
+        print("That's right!")
     
     done = True
     for letter in word:
         if letter.upper() not in guesses:
             done = False
-
+end = time.time()
+score =end - start
 if done:
-    print(f"You win! The word was {word}")
+    print(f"You win! The word was {word}. You found the word in {score} seconds")
 else:
     print(f"Game over! The word was {word}")
