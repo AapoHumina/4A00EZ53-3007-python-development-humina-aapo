@@ -69,8 +69,6 @@ def draw_hangman(count):
       |     / \      
     __|______       
     |       | """)
-    else:
-        print("something went wrong")
 
 def secret_word():
     f = open("wordlist.txt", "r")
