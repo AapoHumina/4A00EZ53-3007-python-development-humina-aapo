@@ -1,7 +1,13 @@
 import random
-import time
 import re
 
+def menu():
+  menu ="""Main Menu:
+1: Play Hangman
+2: Look at High Score
+0: Exit
+"""
+  return menu
 def is_name(name):
     try:
         check = re.search("^[A-ZÖÅ][a-zäöå]+$", name)
@@ -77,3 +83,12 @@ def secret_word():
     hiddenword = wordlist[(random.randrange(0,len(wordlist)))]
     f.close
     return hiddenword
+
+def save_h_score(name, word, score):
+  f = open("highscore.txt", "a")
+  f.write(f"{word}:\n{name} {score} seconds\n")
+  f.close
+
+def show_h_score():
+  f = open("highscore.txt", "r")
+  return f.read()
