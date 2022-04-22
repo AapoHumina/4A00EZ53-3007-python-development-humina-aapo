@@ -1,0 +1,12 @@
+XENOPHOBIA:
+Aapo 8.61391568183899 seconds
+KOULU:
+Kokko 6.27 seconds
+KIRKKO:
+Aapo 4.39 seconds
+KOULU:
+Ka 4.39 seconds
+XENOPHOBIA:
+Aapo 10.19 seconds
+KIRKKO:
+Aapo 6.92 seconds
