@@ -10,3 +10,9 @@ XENOPHOBIA:
 Aapo 10.19 seconds
 KIRKKO:
 Aapo 6.92 seconds
+XENOPHOBIA:
+Aapo 11.16 seconds
+XENOPHOBIA:
+Aapo 10.03 seconds
+KIRKKO:
+Aapo 22.23 seconds

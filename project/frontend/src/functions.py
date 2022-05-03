@@ -10,7 +10,7 @@ def menu():
   return menu
 def is_name(name):
     try:
-        check = re.search("^[A-ZÖÅ][a-zäöå]+$", name)
+        check = re.search("^[A-ZÄÖÅ][a-zäöå]+$", name)
         if bool(check):
             return True
         else:
@@ -92,3 +92,17 @@ def save_h_score(name, word, score):
 def show_h_score():
   f = open("highscore.txt", "r")
   return f.read()
+
+def is_letter(letter):
+  abc = re.search("^[A-ZÄÖÅa-zäöå]$", letter)
+  if bool(abc):
+    return True
+  else:
+    return False
+
+def is_number012(number):
+  number_truth = re.search("^[012]$", number)
+  if bool(number_truth):
+    return True
+  else:
+    return False
