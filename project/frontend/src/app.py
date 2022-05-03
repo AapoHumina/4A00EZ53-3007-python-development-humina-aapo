@@ -5,10 +5,11 @@ guesses = []
 misses = "Misses: "
 wrong_answer_count = 0
 wrong_answer_char = []
-word = secret_word()
 stop = False
+username = ""
 
 while not stop:
+    word = secret_word()
     number_truth = False
     while not number_truth:
         print(menu())
@@ -25,8 +26,9 @@ while not stop:
 
                 name_check = False
                 while name_check == False:
-                    print("What is your name?")
-                    username = input()
+                    if username == "":
+                        print("What is your name?")
+                        username = input()
                     name_check = is_name(username)
                     if name_check:
                         print(f"Welcome {username}")
@@ -74,9 +76,11 @@ while not stop:
                 score =end - start
                 if done:
                     save_h_score(username, word, round(score, 2))
+                    guesses = []
                     print(f"You win! The word was {word}. You found the word in {round(score, 2)} seconds")
                     
                 else:
+                    guesses = []
                     print(f"Game over! The word was {word}")
             else:
                 print("Bye Bye :3")
