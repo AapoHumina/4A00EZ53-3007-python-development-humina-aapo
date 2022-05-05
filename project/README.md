@@ -11,4 +11,4 @@ How to Run the App:
 python3 app.py OR .\run
 
 Screencast:
-https://www.youtube.com/watch?v=2CTqg_e51BU
+https://youtu.be/jTncdjRhB8U
