@@ -1,14 +1,14 @@
-HANGMAN game
+HANGMAN game:
 Project about making hangman game with highscore based on time passed
 
-Author
+Author:
 Aapo Humina
 
-Tech
+Tech:
 Python, pdoc
 
-How to Run the App
+How to Run the App:
 python3 app.py OR .\run
 
-Screencast
+Screencast:
 https://www.youtube.com/watch?v=2CTqg_e51BU
