@@ -85,7 +85,7 @@ while not stop:
                     guesses = []
                     print(f"Game over! The word was {word}")
             else:
-                print("Bye Bye :3")
+                print("Bye Bye")
                 stop = True
         else:
             print("Please choose with number 0, 1 or 2")
