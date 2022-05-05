@@ -3,6 +3,7 @@ from functions import is_name, draw_hangman, secret_word, menu, save_h_score, sh
 
 stop = False
 already_named = False
+name_check = False
 
 while not stop:
 
@@ -26,7 +27,6 @@ while not stop:
                 print("Let's play HANGMAN!")
                 draw_hangman(wrong_answer_count)
 
-                name_check = False
                 while name_check == False:
                     if not already_named:
                         print("What is your name?")
