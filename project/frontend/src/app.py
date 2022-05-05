@@ -1,22 +1,24 @@
 import time
 from functions import is_name, draw_hangman, secret_word, menu, save_h_score, show_h_score, is_letter, is_number012
 
-guesses = []
-misses = "Misses: "
-wrong_answer_count = 0
-wrong_answer_char = []
 stop = False
 username = ""
 
 while not stop:
+
+    guesses = []
+    misses = "Misses: "
+    wrong_answer_count = 0
+    wrong_answer_char = []
     word = secret_word()
     number_truth = False
+
     while not number_truth:
         print(menu())
-        menu_choice = int(input())
+        menu_choice = input()
         number_truth = is_number012(str(menu_choice))
         if number_truth:
-                
+            menu_choice= int(menu_choice)    
             if menu_choice == 2:  
                 print(show_h_score())
 
@@ -63,7 +65,7 @@ while not stop:
                         wrong_answer_count = wrong_answer_count + 1
                         draw_hangman(wrong_answer_count)
                         print(misses)
-                        if wrong_answer_count == 7:
+                        if wrong_answer_count == 6:
                             break
                     else:
                         print("That's right!")

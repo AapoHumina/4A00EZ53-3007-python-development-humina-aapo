@@ -85,13 +85,35 @@ def secret_word():
     return hiddenword
 
 def save_h_score(name, word, score):
-  f = open("highscore.txt", "a")
-  f.write(f"{word}:\n{name} {score} seconds\n")
-  f.close
+  check = True
+  d = open("highscore.txt", "r")
+  content = d.read()
+  if not content == "":
+    high_score_list = csv_to_list(content)
+    high_score_list_sorted = sorted(high_score_list, reverse=False)
+    count = 0
+    for hscore_word in high_score_list_sorted:
+      if hscore_word[0] == word:
+        print(hscore_word[2])
+        count = count +1
+        if count == 3:
+          check = False
+          if float(hscore_word[2]) > float(score):
+            hscore_word == (f"{word}:{name}:{score}")
+            count = 0
+    d.close
+  if check:
+    f = open("highscore.txt", "a")
+    f.write(f"{word}:{name}:{score}\n")
+    f.close
 
 def show_h_score():
   f = open("highscore.txt", "r")
-  return f.read()
+  content = f.read()
+  content_str = csv_to_list(content)
+  content_sorted = sorted(content_str, reverse=False)
+  f.close
+  return content_sorted
 
 def is_letter(letter):
   abc = re.search("^[A-ZÄÖÅa-zäöå]$", letter)
@@ -106,3 +128,10 @@ def is_number012(number):
     return True
   else:
     return False
+
+def csv_to_list(csv):
+  result = []
+  lines = csv.strip().split("\n") 
+  for line in lines:
+      result.append(line.split(":")) 
+  return(result)
