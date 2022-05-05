@@ -43,13 +43,11 @@ def is_name(name):
   return : `bool`
     returns true or false if name is proper name or not
   """
-  try:
-      check = re.search("^[A-ZÄÖÅ][a-zäöå]+$", name)
-      if bool(check):
-          return True
-      else:
-          return False
-  except:
+
+  check = re.search("^[A-ZÄÖÅ][a-zäöå]+$", name)
+  if bool(check):
+      return True
+  else:
       return False
 
 def draw_hangman(count):

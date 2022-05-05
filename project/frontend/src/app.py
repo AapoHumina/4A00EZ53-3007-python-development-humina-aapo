@@ -2,7 +2,7 @@ import time
 from functions import is_name, draw_hangman, secret_word, menu, save_h_score, show_h_score, is_letter, is_number012
 
 stop = False
-username = ""
+already_named = False
 
 while not stop:
 
@@ -28,11 +28,12 @@ while not stop:
 
                 name_check = False
                 while name_check == False:
-                    if username == "":
+                    if not already_named:
                         print("What is your name?")
                         username = input()
-                    name_check = is_name(username)
+                        name_check = is_name(username)
                     if name_check:
+                        already_named = True
                         print(f"Welcome {username}")
                     else:
                         print("Please give proper name with at least 2 characters")
